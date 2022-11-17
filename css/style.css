@@ -1,12 +1,36 @@
+/*fuente*/
+body{
+    font-family: 'Anton', sans-serif;
+    font-size: 1.6rem;
+
+}
+
+html{
+    font-size: 62.5%;
+}
+/*Reset para REMS calculo de REMS -62.5% =10px*/
+
 /**globales**/
-
-
 .contenedor{
-    max-width: 1200px;
+    max-width: 120rem;/*120 * 10*/
     margin: 0 auto;
 }
 
+h1{
+    font-size: 2.6rem;
+}
 
+h2{
+    font-size: 3.4rem;
+}
+
+h3{
+    font-size: 3rem;
+}
+
+h4{
+    font-size: 2.6rem;
+}
 
 /*Header */
 .site-header.inicio{
@@ -14,13 +38,26 @@
     background-position: center center;
     background-size: cover;
     height: 110vh;
-    min-height: 500px;
+    min-height: 60rem;
+}
+
+.contenido-header{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contenido-header h1{
+    padding-bottom: 2rem;
+    max-width: 50rem;
+    line-height: 2;
 }
 
 .barra {
     display: flex;
     justify-content: space-between;
-    padding-top: 30px;
+    padding-top: 3rem;
     align-items: center;
 }
 
@@ -29,8 +66,8 @@
 .navegacion a{
     color: rgba(35,36,41,1);
     text-decoration: none;
-    font-size: 20px;
-    margin-right: 20px;
+    font-size: 1.8rem; /*20px*/
+    margin-right: 2rem;
 }
 
 .navegacion a:hover{
@@ -38,5 +75,5 @@
 }
 
 .navegacion a:last-of-type{
-    margin-right: 0;
+    margin: 0;
 }
