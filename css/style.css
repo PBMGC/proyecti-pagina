@@ -1,0 +1,42 @@
+/**globales**/
+
+
+.contenedor{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+/*Header */
+.site-header.inicio{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),url(../img/yo.jpg );
+    background-position: center center;
+    background-size: cover;
+    height: 110vh;
+    min-height: 500px;
+}
+
+.barra {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    align-items: center;
+}
+
+/* Navegacion */
+
+.navegacion a{
+    color: rgba(35,36,41,1);
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.navegacion a:hover{
+    color: rgb(0,0,0);
+}
+
+.navegacion a:last-of-type{
+    margin-right: 0;
+}
