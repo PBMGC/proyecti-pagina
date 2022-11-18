@@ -295,3 +295,22 @@ h4{
     padding-left: 5rem;
     font-weight: 10;
 }
+
+/*footer*/
+
+
+.site-footer{
+    background-color: darkslategray;
+    margin: 0;
+}
+
+.contenedor-footer{
+    padding: 3rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright{
+    margin: 0;
+    color: gray;
+}

@@ -1,0 +1,34 @@
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+.gato{
+    background-image: url(../img/gato.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 190vh;
+    min-height: 60rem;
+}
+
+.vuelta{
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    margin-top: 0;
+    margin-right: 21rem;
+    margin-left: 21rem;
+    /*para enlace*/
+    display: inline-block;
+    text-align: center;
+}
+
+.d-block{
+    display: block;
+}
+
+.color{
+    background-color: yellow;
+}
