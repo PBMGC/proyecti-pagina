@@ -55,9 +55,6 @@ h4{
     text-align: center;
 }
 
-.d-block{
-    display: block;
-}
 
 /**botones**/
 .boton{
@@ -70,6 +67,11 @@ h4{
     /*para enlace*/
     display: inline-block;
     text-align: center;
+}
+
+/*utilidad movida*/
+.d-block{
+    display: block;
 }
 
 .boton-marron{
@@ -167,4 +169,129 @@ h4{
 .precio{
     color:rgb(19, 19, 95);
     font-weight: 700;
+}
+
+.iconos-gatos{
+    list-style:  none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.iconos-gatos li{
+    flex: 1;
+}
+
+.ver-todas{
+    display: flex;
+    justify-content: flex-end;
+}
+
+/*contacto*/
+
+.imagen-contacto{
+    background-image: url(../img/gatomirando.jpeg);
+    background-position: center center;
+    height: 50rem;
+    background-size: cover;
+    display: flex;
+    align-items: center;   
+}
+
+
+.contenido-contacto{
+    flex: 1;
+    color: #ece4e4;
+}
+
+.cotenido-contacto p{
+    font-size: 1.8rem;
+}
+
+/*seccion  inferior */
+
+.seccion-inferior{
+    display: flex;
+    justify-content: space-between;
+}
+
+.seccion-inferior .blog{
+    flex-basis: 60%;
+}
+
+.seccion-inferior .testimoniales{
+    flex-basis: calc(40% - 2rem);
+}
+
+.entrada-blog{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+}
+
+.entrada-blog:last-of-type{
+    margin-bottom: 0;
+}
+
+.entrada-blog .imagen{
+    flex-basis: 40%;
+}
+
+.entrada-blog .texto-entrada{
+    flex-basis: calc(60% - 3rem);
+}
+
+.texto-entrada a{
+    color: black;
+    text-decoration: none;
+}
+
+.texto-entrada h4{
+    margin: 0;
+    line-height: 1.5;
+}
+
+.texto-entrada h4::after{
+    content: "";
+    display: block;
+    width: 15rem;
+    height: .5rem;
+    background-color: black;
+
+    margin-top: 5px;
+}
+
+.texto-entrada span{
+    color: yellow;
+}
+
+/*testimoniales */
+
+.testimonial{
+    background-color: black;
+    color: white;
+    font-size: 1.3rem;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.testimonial p{
+    text-align: right;
+}
+
+.testimonial blockquote::before{
+    content: "";
+    background-image: url(../img/gatovector.jpg);
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    left: -2rem;
+}
+
+/*absolute en el padre relative en el hijo*/
+
+.testimonial blockquote{
+    position: relative;
+    padding-left: 5rem;
+    font-weight: 10;
 }
