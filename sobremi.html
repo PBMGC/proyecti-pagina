@@ -4,10 +4,85 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Portafolio</title>
 </head>
 <body>
-    <h1>Sobre Mi</h1>
-    <a href="/index.html">volver</a>
+
+    <header class="site-header">
+        <div class="contenedor contenido-header">
+            <div class="barra">
+                <a href="/"> 
+                    <img src="img/logo.png" alt="Kanye" width="300px">
+                </a>
+                
+                <nav class="navegacion">
+                    <a href="index.html">Inicio</a>
+                    <a target="_blank" href="https://github.com/PBMGC?tab=repositories">Repositorio</a>
+                    <a target="_blank" href="https://open.spotify.com/playlist/0tpYNj1GB9o6bLqK5WOeKU?si=c297cc751c8d4529">Playlist Spotify</a>
+                    <a href="gato.html">Apoco si</a>    
+                </nav>
+            </div>
+        </div> 
+    </header>
+    
+    <main class="contenedor">
+        <h1 class="fw-300 centrar-texto">Sobre Mi</h1>
+        <div class="contenido-nosotros">
+            <div class="imagen">
+                <img src="/img/yo.jpg" alt=""> 
+            </div>
+            <div class="texto-nosotros">
+                <blockquote>1 año programando</blockquote>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum repellat fugiat corrupti quasi? Nobis molestias quas debitis et, maiores nam magni porro corporis in assumenda odit unde rem eos recusandae.
+                Iusto culpa quo commodi vel reprehenderit suscipit, assumenda magni asperiores quod voluptatibus? Reiciendis amet mollitia nostrum animi perferendis quibusdam nemo dolores et aliquid sequi, neque illum voluptas. Nam, distinctio quaerat.</p>
+            </div>
+        </div>
+    </main>
+
+    <section  class="contenedor seccion">
+        <h2 class="fw-300 centrar-texto">Lenguajes que Domino nivel junior</h2>
+        <div class="iconos-nosotros">
+            <div class="icono">
+                <a href="https://github.com/PBMGC/SENATI-REPETITIVOS-PYTHON.git">
+                    <img src="/img/pithon.jfif" width="200px"  alt="Late">
+                </a>
+                <h3>PYTHON</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium facere reprehenderit facere reprehenderit facere reprehenderit!</p>
+            </div>
+            <div class="icono">
+                <a href="https://github.com/PBMGC/eclipse-planilla.git">
+                    <img src="/img/java.png"  width="200px" alt="Donda">
+                </a>
+                <h3>JAVA</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium facere reprehenderit facere reprehenderit facere reprehenderit!</p>
+            </div>
+            <div class="icono">
+                <a href="https://github.com/PBMGC/proyecti-pagina.git">
+                    <img src="/img/css.png" width="150px" alt="Ye">
+                </a>
+                <h3 class="encabezado">WEB</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium facere reprehenderit  facere reprehenderit facere reprehenderit!</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="site-footer seccion">  
+        <div class="contenedor contenedor-footer">
+            <nav class="navegacion">
+                <a href="index.html">Inicio</a>
+                <a target="_blank" href="https://github.com/PBMGC?tab=repositories">Repositorio</a>
+                <a target="_blank" href="https://open.spotify.com/playlist/0tpYNj1GB9o6bLqK5WOeKU?si=c297cc751c8d4529">Playlist Spotify</a>
+                <a href="gato.html">Apoco si</a>
+            </nav>
+            <p class="copyright">Todos Los Derechos Reservados 2022 &commat; </p>
+        </div>             
+    </footer>
 </body>
 </html>
