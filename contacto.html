@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Portafolio</title>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="contenedor contenido-header">
+            <div class="barra">
+                <a href="/"> 
+                    <img src="img/logo.png" alt="Kanye" width="300px">
+                </a>
+                
+                <nav class="navegacion">
+                    <a href="index.html">Inicio</a>
+                    <a target="_blank" href="https://github.com/PBMGC?tab=repositories">Repositorio</a>
+                    <a target="_blank" href="https://open.spotify.com/playlist/0tpYNj1GB9o6bLqK5WOeKU?si=c297cc751c8d4529">Playlist Spotify</a>
+                    <a href="gato.html">Apoco si</a>    
+                </nav>
+            </div>
+        </div> 
+    </header>
+
+    <h1 class="fw-300 centrar-texto">Contacto</h1>
+    <img src="img/ye.jpg" width="100%" alt="">
+
+    <main class="contenedor seccion contenido-centrado">
+        <h2 class="fw-300 centrar-texto">Llenar formulario de Contacto</h2>
+    
+        <form action="">
+
+            <fieldset>
+
+                <legend>Informacion Personal</legend>
+    
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" placeholder="TuNombre">
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="TuCorreo" required>
+                
+                <label for="telefono">Telefono</label>
+                <input type="tel" id="telefonod" placeholder="123456" required>
+                
+                <label for="mensaje">Mensaje</label>
+                <textarea  id="mensaje">Hola soy textarea</textarea>
+                
+            </fieldset>
+
+            <fieldset>
+
+                <legend>Informacion Sobre Pelicula</legend>
+                <label for="opciones">Vende o Compra</label>
+                <select id="opciones">
+                    <option value="" disabled selected>--selecciones--</option>
+                    <option value="">Venta</option>
+                    <option value="">Compra</option>
+                </select>
+
+                <label for="presupuesto">Presupuesto</label>
+                <input type="number" min="0" max="100" step="5" id="presupuesto">
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>Contacto</legend>
+
+                <p>Como desea ser Contactado: </p>
+                
+                <div class="forma-contacto">    
+                    <label for="telefono">Telefono</label>
+                    <input type="radio" name="contacto" value="telefono" id="telefono">
+                    
+                    <label for="correo">Email</label>
+                    <input type="radio" name="contacto" value="correo" id="correo">
+                </div>
+
+                <div class="check-peliculas">    
+                    <p>Peliculas</p>
+                    <input type="checkbox" name="order" value="p1">Come and See
+                    <input type="checkbox" name="order" value="p2">ShawShank
+                    <input type="checkbox" name="order" value="p3">Red Dead
+                </div>
+
+                <p>Si elegio Telefono , elija fecha y hora</p>
+                <label for="fecha">Fecha</label>
+                <input type="date" id="fecha">
+
+                <label for="hora">Hora</label>
+                <input type="time" id="hora" min="9:00" max="18:00">
+
+                <label for="contraseña">Contraseña</label>
+                <input type="password" id="contraseña">
+
+
+            </fieldset>
+
+
+            <input type="submit" value="Enviar" class="boton-marron boton">
+        </form>
+    </main>
+
+    <footer class="site-footer seccion">  
+        <div class="contenedor contenedor-footer">
+            <nav class="navegacion">
+                <a href="index.html">Inicio</a>
+                <a target="_blank" href="https://github.com/PBMGC?tab=repositories">Repositorio</a>
+                <a target="_blank" href="https://open.spotify.com/playlist/0tpYNj1GB9o6bLqK5WOeKU?si=c297cc751c8d4529">Playlist Spotify</a>
+                <a href="gato.html">Apoco si</a>
+            </nav>
+            <p class="copyright">Todos Los Derechos Reservados 2022 &commat; </p>
+        </div>             
+    </footer>
+</body>
+</html>

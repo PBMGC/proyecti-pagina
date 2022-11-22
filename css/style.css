@@ -71,6 +71,11 @@ h4{
     /*para enlace*/
     display: inline-block;
     text-align: center;
+    border: none;
+}
+
+.boton:hover{
+    cursor: pointer;
 }
 
 /*utilidad movida*/
@@ -353,3 +358,72 @@ h4{
  justify-content: space-between; 
  align-items: center;  
 }
+
+/*contacto estilo de inputs */
+form p{
+    font-size: 2rem;
+    margin: .2rem 0 0 0;
+}
+
+
+
+legend{
+    font-size: 2rem;
+    color: #333333;
+}
+
+
+label{
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+}
+
+input:not([type="submit"]),
+textarea,
+select{
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    background-color: gray;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 1rem;
+    color: black;
+}
+
+input[type="radio"]{
+    width: auto;
+    margin: 0;
+}
+
+
+select{
+    /*obligatorio*/
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+textarea{
+    height: 20rem;
+}
+
+.forma-contacto{
+    max-width: 30rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input[type="checkbox"]{
+    width: auto;
+    margin: 0;
+}
+
+.check-peliculas{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20rem;
+}
+
