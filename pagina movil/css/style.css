@@ -64,8 +64,16 @@ img{
         justify-content: space-between;
     }
 
+    .columnas-4{
+        flex: 0 0  calc(33.3 - 1rem);
+    }
+
     .columnas-6{
         flex: 0 0 calc(50% - 1rem);
+    }
+
+    .columnas-8{
+        flex: 0 0  calc(66.6% - 1rem);
     }
 }
 
@@ -240,6 +248,7 @@ se le debe aplicar un no margin a los h3*/
 .curso{
     padding-bottom: 3rem;
     border-bottom: 1px solid black;
+    padding-top: 3rem;
 
 }
 
@@ -253,9 +262,11 @@ se le debe aplicar un no margin a los h3*/
     font-size: 2rem;
 }
 
-.curso p span {
+.curso p span,
+.curso p.descripcion {
     font-weight: 400;
 }
+
 
 /*footer*/
 
