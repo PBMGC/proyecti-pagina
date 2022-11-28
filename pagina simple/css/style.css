@@ -21,6 +21,7 @@ img{
     max-width: 100%;
 }
 .contenedor{
+    width: 95%;
     max-width: 120rem;/*120 * 10*/
     margin: 0 auto;
 }
@@ -72,7 +73,17 @@ h4{
     display: inline-block;
     text-align: center;
     border: none;
+    display: block;
+    flex: 0 0 100%;
 }
+
+@media (min-width: 768px){
+    .boton{
+        display: inline-block;
+        flex: 0 0 auto;
+    }
+}
+
 
 .boton:hover{
     cursor: pointer;
@@ -110,6 +121,13 @@ h4{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    text-align: center;
+}
+
+@media (min-width: 768px){
+    .contenido-header{
+        text-align: left;
+    }
 }
 
 .contenido-header h1{
@@ -119,10 +137,15 @@ h4{
 }
 
 .barra {
-    display: flex;
-    justify-content: space-between;
     padding-top: 3rem;
-    align-items: center;
+}
+
+@media (min-width: 768px){
+    .barra {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 /* Navegacion */
@@ -132,27 +155,70 @@ h4{
     text-decoration: none;
     font-size: 1.8rem; /*20px*/
     margin-right: 2rem;
+    font-size: 1.8rem;
+    /*display: block;*/
+}
+@media (min-width: 768px){
+    .navegacion a{
+        font-size: 2.2rem;
+        display: inline-block;
+        /*para diseño de cascada*/
+        /*es poner el margin y display block*/
+    }
+
+    .navegacion a:last-of-type{
+        margin: 0;
+    }
 }
 
 .navegacion a:hover{
     color: rgb(0,0,0);
 }
 
-.navegacion a:last-of-type{
-    margin: 0;
+/*mobile menu menu desplegable*/
+
+.mobile-menu img{
+    width: 5rem;
+}
+
+@media (min-width: 768px){
+    .mobile-menu{
+        display: none;
+    }
+}
+/*para que se ejecute lo que cuando se de click*/
+.navegacion:target{
+    display: inline-block;
+}
+
+.navegacion{
+    display: none;
+}
+
+@media (min-width: 768px){
+    .navegacion{
+        display: block;
+    }
 }
 
 /**iconos Nosotroa **/
 
-.iconos-nosotros{
-    display: flex;
-    justify-content: space-between;
+@media (min-width: 768px){
+    .iconos-nosotros{
+        display: flex;
+        justify-content: space-between;
+    }    
 }
 
 .icono{
     /*calculo*/
-    flex-basis: calc(33.3% -1rem);
     text-align: center;
+}
+
+@media (min-width: 768px){
+    .icono{
+        flex-basis: calc(33.3% - 1rem);
+    }
 }
 
 .icono h3{
@@ -161,20 +227,26 @@ h4{
 
 /*ANuncios*/
 
-.contenedor-anuncios{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+@media (min-width: 768px){
+    .contenedor-anuncios{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
 }
 
 .anuncio{
     /*flex: 0 0 calc(33.3% - 1rem)  otra forma mas corta de indicar el flex el primer valor es el shrink 
     el segundo el grow y el tercero el basis */
-    flex-shrink: 0;
-    flex-basis:calc(33.3% - 1rem) ;
     border: 3px solid black;
     background-color: #f5f5f5;
     margin-bottom: 2rem;
+}
+
+@media (min-width: 768px){
+    .anuncio{
+        flex: 0 0 calc(33.3% - 1rem) ;
+    }
 }
 
 .contenido-anuncio{
@@ -221,7 +293,7 @@ h4{
 
 
 .contenido-contacto{
-    flex: 1;
+    flex: 0 0 95%;
     color: #ece4e4;
 }
 
@@ -230,18 +302,19 @@ h4{
 }
 
 /*seccion  inferior */
-
-.seccion-inferior{
-    display: flex;
-    justify-content: space-between;
-}
-
-.seccion-inferior .blog{
-    flex-basis: 60%;
-}
-
-.seccion-inferior .testimoniales{
-    flex-basis: calc(40% - 2rem);
+@media (min-width: 768px){
+    .seccion-inferior{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .seccion-inferior .blog{
+        flex-basis: 60%;
+    }
+    
+    .seccion-inferior .testimoniales{
+        flex-basis: calc(40% - 2rem);
+    }   
 }
 
 .entrada-blog{
@@ -250,16 +323,26 @@ h4{
     margin-bottom: 4rem;
 }
 
+/*para imagenes grandes*/
+/*@media (min-width: 768px){
+    .entrada-blog{
+        display: flex;
+        justify-content: space-between;
+    }
+}*/
+
 .entrada-blog:last-of-type{
     margin-bottom: 0;
 }
 
-.entrada-blog .imagen{
-    flex-basis: 40%;
-}
-
-.entrada-blog .texto-entrada{
-    flex-basis: calc(60% - 3rem);
+@media (min-width: 768px){
+    .entrada-blog .imagen{
+        flex-basis: 40%;
+    }
+    
+    .entrada-blog .texto-entrada{
+        flex-basis: calc(60% - 3rem);
+    }   
 }
 
 .texto-entrada a{
@@ -327,22 +410,39 @@ h4{
 
 .contenedor-footer{
     padding: 3rem 0;
-    display: flex;
-    justify-content: space-between;
+    text-align: center;
+}
+@media (min-width: 768px){
+    .contenedor-footer{
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
+.site-footer nav{
+    display: none;
+}
+
+/*para aparecer y desaparecer el menu del footer*/
+@media (min-width: 768px){
+    .site-footer nav{
+        display: block;
+    }
+}
 .copyright{
     margin: 0;
     color: gray;
 }
 
 /**paginas internas*/
-
-.contenido-nosotros{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-column-gap: 2rem;
+@media (min-width: 768px){
+    .contenido-nosotros{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-column-gap: 2rem;
+    }    
 }
+
 
 .texto-nosotros blockquote{
     font-weight: 900;
