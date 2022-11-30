@@ -1,0 +1,252 @@
+/*custom propierties*/
+:root{
+  --negro: black;
+  --boton:rgb(40,227,82);
+  --anchodepantalla:1200px;
+}
+
+
+/*globales*/
+html {
+    box-sizing: border-box;
+    min-height: 100%;
+    font-size: 62.5%;/*hace que un rem sea 10px*/
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body {
+  font-family: 'Krub',sans-serif;
+  font-size: 1.8rem;
+  min-height: 100%;
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+h1,h2,h3{
+  margin: 0;
+}
+
+h2,h3{
+  text-align: center;
+}
+
+h3{
+  color: var(--boton);
+  font-weight: 300;
+  font-size: 2.5rem;
+}
+
+p{
+  font-size: 1.8rem;
+  line-height: 3rem;
+}
+/*navegacion*/
+/*ël flexbox solo debe ser aplicado al padre*/
+.site-header nav{
+  max-width: var(--anchodepantalla);
+  margin: 0 auto;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+@media (min-width: 768px){
+  .site-header nav{
+    justify-content: space-around;
+    flex-direction: row;
+  }
+}
+
+.site-header nav a{
+  /*aplicacion del custom propiertie*/
+  color: white;
+  text-decoration: none;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.site-header nav a:last-of-type{
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px){
+  .site-header nav a{
+    margin-bottom: 0;
+  }
+}
+
+.site-header nav a:hover{
+  color: gray;
+}
+
+/*baner*/
+.hero{
+  height: 45rem;
+  background-image: url(../img/ye.webp);
+  position: relative;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*alineado de item con felx y direction en columns*/
+/*  justify-content: center;
+  align-items: center;
+  flex-direction: column;*/
+
+.hero::after{
+  content:'';
+  background-color: rgba(128, 128, 128, 0.123);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.contenedor-hero{
+  color: rgb(40,227,82);
+  /*para que el after no lo afecte al cotenedor*/
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.contenedor-hero i{
+  font-size: 4rem;
+}
+
+/*boton*/
+.boton{
+  text-decoration: none;
+  background-color: var(--boton);
+  padding: .8rem 4rem;
+  display: inline-block;
+  margin-top: .4rem;
+  color: black;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size:2.2rem;
+  border-radius: .5rem;
+  border: none;
+}
+
+.boton:hover{
+  cursor: pointer;
+}
+
+/*main*/
+.contenedor{
+  max-width: var(--anchodepantalla);
+  margin: 2rem auto; 
+  background-color: white;
+  padding: 3rem;
+  border-radius: 1.2rem;
+  -webkit-box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.7);
+  -moz-box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.7);
+  box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.7);
+}
+
+.contenedor-servicios{
+  margin-top: 2rem;
+}
+
+@media (min-width: 768px){
+  .contenedor-servicios{
+    display: flex;
+    justify-content: space-between;
+  }
+  .servicio{
+    /*primer valor crecimiento,segundo valor de disminucuon,
+    tercero es la base*/
+    flex: 1; 
+    /*forma 2*/
+    /*flex: 0 0 calc(33.3% - 1rem*/      
+  }
+}
+
+.servicio{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.iconos{
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background-color: var(--boton);
+  display: flex;
+  /*para cuando hay mas*/
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 5rem;
+  margin-top: 2rem;
+}
+
+/*formulario*/
+form{
+  background-color: gray;
+  padding: 2rem;
+  border-radius: 2rem;
+  color: var(--boton);
+  margin-top: 2rem;
+}
+
+form legend{
+  margin: 2rem auto;
+  font-size: 2.4rem;
+}
+
+@media (min-width: 768px){
+  form{
+    max-width: 800px;
+    margin: 3rem auto;
+  }
+
+  .contenedor-campos{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  /*creacion basica del grid*/
+  .campo{
+    flex: 0 0 calc(50% - 1rem);
+  }
+
+}
+
+.campo{
+  display: flex;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.campo label{
+  flex: 0 0 90px;
+}
+
+.campo input{
+  flex: 1;
+  height: 3rem;
+}
+
+.campo textarea{
+  height: 6rem;
+  flex: 1;
+}
+
+.w-100{
+  flex: 0 0 100%;
+}
+
+.enviar{
+  display: flex;
+  justify-content: center;
+}
