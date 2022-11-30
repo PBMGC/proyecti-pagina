@@ -235,6 +235,7 @@ form legend{
 .campo input{
   flex: 1;
   height: 3rem;
+  overflow: hidden;
 }
 
 .campo textarea{
