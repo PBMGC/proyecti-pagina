@@ -1,0 +1,242 @@
+:root{
+    --fuenteprincial: 'Nerko', cursive;
+    --primario: black;
+    --secundario: gray;
+}
+
+/*globales*/
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body{
+    background-color: var(--primario);
+    line-height: 2;
+    font-size: 2.5rem;
+}
+
+body.footer-fijo{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body.footer-fijo main{
+    flex: 1;
+}
+
+h1{
+    color: white;
+    text-align: center;
+    font-size: 4rem;
+    font-family: var(--fuenteprincial);
+}
+
+p{
+    font-size: 1.8rem;
+    font-family: var(--fuenteprincial);
+    color: white;
+}
+.contenedor{
+    max-width: 1000px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+img{
+    max-width: 100%;
+}
+
+/*header*/
+.header{
+    display: grid;
+    justify-content: center;
+    padding: 3rem 0;
+}
+
+.header img{
+    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px){
+    .header img{
+        width: 50%;
+    }
+}
+
+
+/*barra*/
+.barra{
+    background-color: white;
+    padding: 1rem 0;
+}
+
+.barra .nav{
+    display: grid;
+    /*crea 2 columndas de 200 pixeles cada una*/
+    grid-template-columns: repeat(2,200px);
+    /*si se le pone auto pone el tamaño que solo requiere el proyecto*/
+    /*grid-template-columns: repeat(2,auto);*/
+    /*separacion entrre columnas*/
+    grid-gap: 1rem;
+    justify-content: center;
+}
+
+.barra .nav a{
+    font-family: var(--fuenteprincial);
+    font-size: 3rem;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+}
+
+.barra .nav a:hover{
+    color: gray;
+}
+
+/*main*/
+.lista-productos{
+    display: grid;
+    /*1fr = 1 fraccion*/
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 2rem;
+}
+
+@media (min-width: 768px){
+    .lista-productos{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+.producto{
+    background-color: gray;
+    padding: .4rem;
+}
+
+.contenido-producto p {
+    font-family: var(--fuenteprincial);
+    color: white;
+    text-align: center;
+    margin: 1rem 0;
+    line-height: 1.2;
+}
+
+.contenido-producto .titulo{
+    font-size: 4rem;
+}
+
+.contenido-producto .precio{
+    font-size: 2rem;
+    color: black;
+}
+
+/*graficos*/
+.grafico{
+    min-height: 300px;
+    grid-column: 1 / 3;
+    background-size: cover;
+    background-position: center center;
+}
+
+.grafico-1{
+    background-image: url(../img/fondos/fondo4.png);
+    /*row= fila, columna = columna*/
+    grid-row: 2 / 3;
+}
+
+.grafico-2{
+    background-image: url(../img/fondos/fondo6.jpg);
+    grid-row: 6/7;
+}
+
+@media (min-width: 768px){
+    .grafico-2{
+        grid-row: 4 / 5;
+        grid-column: 2 / 4;
+    }
+}
+
+/*pagina nosotros*/
+
+.contenedor-informacion{
+    text-align: center;
+}
+
+/*responsive sencillo solo con grid
+solo con el repeat*/
+.contenedor-informacion{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    /*grid-gap afecta a todo , column solo a columnas row a filas*/
+    grid-column-gap: 2rem;
+    text-align: center;
+    }
+
+/*contenido de producto*/
+.formulario-pedido{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,6rem);
+    grid-gap: 1rem;
+}
+
+.campo{
+    background-color: transparent;
+    border: 5px solid gray;
+    font-family: var(--fuenteprincial);
+    font-size: 2rem;
+    padding: 1rem;
+    width: 100%;
+    color: gray;
+    text-align: center;
+}
+
+.boton{
+    background-color: white;
+    color: black;
+    font-size: 2rem;
+    font-family: var(--fuenteprincial);
+    text-transform: uppercase;
+    border: none;
+    transition: background-color .4s;
+    grid-column: 1 / 4;
+}
+
+.boton:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.talla{
+    grid-column: 1 / 3;
+}
+
+.imagen-producto{
+    width: 100%;
+}
+/*para quitarle los estilos en todos los navegadores*/
+/*.talla{
+    -webkit-appearance: none;
+    -webkit-border-radius:0px;
+}*/
+
+/*footer*/
+.footer{
+    background-color: white;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+.copyright{
+    font-family: var(--fuenteprincial);
+    color: black;
+    font-size: 2.2rem;
+    text-align: center;
+}
