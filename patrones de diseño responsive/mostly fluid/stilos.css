@@ -1,0 +1,26 @@
+html {
+    box-sizing: border-box;
+}
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.contenido-superior{
+    padding: 20px;
+}
+/*esto selecciona el primer hijo*/
+.contenido-inferior>div{
+    padding: 20px;
+}
+
+@media only screen and (min-width:768px){
+    .contenido-inferior >div{
+        width: 50%;
+        float: left;
+    }
+
+    .contenedor{
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+}

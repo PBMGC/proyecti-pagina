@@ -1,0 +1,62 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1{
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.contenedor{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.contenido-inferior::after{
+    clear: both;
+    display: block;
+    content: '';
+}
+
+.caja{
+    width: 33.3%;
+    float: left;
+    padding: 0 20px;
+}
+
+.caja .contenido{
+    background-color: yellow;
+    padding: 20px;
+}
+
+@media only screen and (max-width:800px){
+    body{
+        background-color: red;
+    }
+    h1{
+        font-size: 30px;
+        color: purple;
+    }
+    p{
+        color: white;
+    }
+}
+
+@media only screen and (max-width:500px){
+    body{
+        background-color: blue;
+    }
+    .caja{
+        width: 100%;
+        margin: 0 0 20px 0;
+        padding: 0;
+    }
+}

@@ -1,0 +1,50 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+}
+
+p{
+    font-weight: 400;
+}
+
+img{
+    max-width: 100%;
+}
+
+/*media query*/
+@media only screen and (max-width: 599px){
+    body{
+        background-color: orange;
+    }
+    h1{
+        color: white;
+    }
+    p{
+        text-align: justify;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 799px){
+    body{
+        background-color: orangered;
+    }
+    h1{
+        text-align: center;
+    }
+    img{
+        float: right;
+    }
+}
+
+@media only screen and (min-width:800px){
+    body{
+        background-color: blue;
+    }
+    h1{
+        color: red;
+    }
+    .contenedor{
+        margin: 0 auto;
+        max-width: 800px;
+    }
+}
