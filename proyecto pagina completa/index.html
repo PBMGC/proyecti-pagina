@@ -15,17 +15,149 @@
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
-
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,300&family=Rowdies&family=Sofia+Sans+Condensed&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
+  <script src="https://kit.fontawesome.com/359d016a31.js" crossorigin="anonymous"></script>
 
   <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
+  <header class="site-header">
+    <div class="hero">
+      <div class="contenido-header">
+        <nav class="redes-sociales">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-github"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </nav>
+        <div class="informacion-evento">
+          <div class="clearfix">
+            <p class="fecha"><i class="fa-solid fa-calendar"></i>3-14 Abril</p>
+            <p class="ciudad"><i class="fa-solid fa-location-pin"></i>Lima,PERU</p>
+          </div>
+          <h1 class="nombre-sitio">Concierto Benefico</h1>
+          <p class="slogan">El mejor concierto<span> de este año</span></p>
+        </div>
+      </div>
+    </div> <!--hero-->
+  </header>
+
+  <div class="barra">
+    <div class="contenedor clearfix">
+      <div class="logo">
+        <img src="img/neco.png" alt="" width="200px">
+      </div>
+
+      <div class="menu-movil">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav class="navegacion-principal">
+        <a href="#">Cronograma</a>
+        <a href="#">Calendario</a>
+        <a href="#">Invitados</a>
+        <a href="#">Reservas</a>
+      </nav>
+    </div><!--contenedor-->
+  </div> <!---barra-->
+
+  <section class="seccion contenedor">
+    <h2>EL mejor concierto del año</h2>
+    <i class="fa-solid fa-hundred-points"></i>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id labore cupiditate repudiandae obcaecati adipisci harum quas hic aspernatur ut? Incidunt officia nulla voluptatum amet laboriosam magni, magnam maiores aliquid at!</p>
+  </section> <!---seccion-->
+
+
+  <section class="programa">
+    <div class="contenedor-video">
+      <video autoplay loop muted poster="kanye.jfif">
+        <source src="video/kanye-west-dancing.mp4" type="video/mp4">
+        <source src="video/kanye-west-dancing.webm" type="video/webm">
+        <source src="video/kanye-west-dancing.ogv" type="video/ogg">
+      </video>
+    </div><!--contenedor video-->
+    <div class="contenido-programa">
+      <div class="contenedor">
+        <div class="programa-evento">
+          <h2>Programa del Evento</h2>
+          <nav class="menu-programa">
+            <a href="#talleres"><i class="fa-solid fa-microphone"></i>Conciertos</a>
+            <a href="#conferencias"><i class="fa-solid fa-bowl-food"></i>Comida</a>
+            <a href="#seminarios"><i class="fa-solid fa-dice"></i>Actividades</a>
+          </nav>
+
+          <div id="talleres" class="info-curso ocultar clearfix">
+            <div class="detalle-evento">
+              <h3>Kanye,Kid Cudi,PartyNextDoor</h3>
+              <p><i class="fa-solid fa-clock"></i>16:40 hrs</p>
+              <p><i class="fa-solid fa-calendar"></i>10 de Diciembre</p>
+              <p><i class="fa-solid fa-star"></i>Big Floppa</p>
+            </div>
+
+            <div class="detalle-evento">
+              <h3>Gorillaz</h3>
+              <p><i class="fa-solid fa-clock"></i>18:00 hrs</p>
+              <p><i class="fa-solid fa-calendar"></i>10 de Diciembre</p>
+              <p><i class="fa-solid fa-star"></i>Momichis</p>
+            </div>
+            <a href="#" class="button float-right">Ver Todos</a>
+          </div><!--id talleres-->
+        </div><!--programa evento-->
+      </div><!--contendor--->
+    </div><!--contenido del programa-->
+  </section> <!--programa-->
+
+  <section class="invitados contenedor seccion">
+    <h2>Nuestros Invitados</h2>
+    <ul class="lista-invitados clearfix">
+      <li>
+        <div class="invitado">
+          <img src="img/donda.webp" >
+          <p>Kanye West</p>
+        </div>
+      </li>
+      <li>
+        <div class="invitado">
+          <img src="img/gorillaz.webp">
+          <p>Gorillaz</p>
+        </div>
+      </li>
+      <li>
+        <div class="invitado">
+          <img src="img/next.jfif">
+          <p>Party Next Door</p>
+        </div>
+      </li>
+      <!---pseudocodigo para mas contenido en la lista
+      <li>
+        <div class="invitado">
+          <img src="img/next.jfif" >
+          <p>Party Next Door</p>
+        </div>
+      </li>
+      <li>
+        <div class="invitado">
+          <img src="img/gorillaz.webp">
+          <p>Gorillaz</p>
+        </div>
+      </li>
+      <li>
+        <div class="invitado">
+          <img src="img/gorillaz.webp">
+          <p>Gorillaz</p>
+        </div>
+      </li>-->
+      
+    </ul>
+  </section>
+
   <!--modernizr sirve para obtener de que navegador esta usando el usuario-->
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
