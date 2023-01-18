@@ -149,6 +149,18 @@ h3{
   color:  rgb(40,227,82);
 }
 
+.button.transparente{
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.button.transparente:hover{
+  border: 2px solid rgb(40,227,82);
+  background-color: rgb(40,227,82);
+  color: black;
+}
+
 .float-right{
   float: right;
 }
@@ -653,8 +665,177 @@ para una seleccion mas exacta*/
 }
 
 
+/*testimoniales*/
+
+.testimoniales{
+  padding-bottom: 20px;
+}
+
+.testimonial{
+  padding: 5px;
+  color: white;
+}
+
+@media (min-width: 768px){
+  .testimonial{
+    float: left;
+    width: 33.3%;
+  }
+}
+
+blockquote{
+  background-color: black;
+  border: 1px solid orange;
+  position: relative;
+  margin: 0 0 10px 0;
+  padding-bottom: 20px;
+}
+
+blockquote p{
+  text-align: justify !important;
+  font-size: .8em !important;
+  line-height: 2;
+  padding: 0 20px 0 65px;
+}
+
+blockquote p::before{
+  content: '\201c';
+  position: absolute;
+  left: 13px;
+  top: 0px;
+  font-size: 8rem;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  color: rgb(40,227,82);
+}
+
+.info-testimonial{
+  padding: 0;
+}
+
+.info-testimonial img{
+  float: left;
+  width: 20%;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+
+.info-testimonial cite{
+  text-align: left;
+  color: rgb(40,227,82);
+  text-transform: uppercase;
+  font-size: 18px;
+  padding-top: 20px;
+  width: 66.6%;
+  float: right;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.info-testimonial cite span{
+  color: white;
+  display: block;
+  text-transform: none;
+  margin-top: 5px;
+}
+
+/*Newsletter*/
+.newsletter{
+  position: relative;
+  height: auto;
+}
+
+.newsletter::before {
+  background-image: url(../img/ye.webp);
+  content: '';
+}
+
+.newsletter .contenido{
+  padding: 100px 0;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.newsletter .contenido p{
+  font-size: 1.2em;
+  text-transform: lowercase;
+}
+
+.newsletter .contenido h3{
+  text-transform: uppercase;
+  font-size: 5vw;
+}
+
+/*cuenta regresiva*/
+.cuenta-regresiva ul li{
+  text-transform: uppercase;
+  font-size: 2rem;
+  text-align: center;
+  color: rgb(40,227,82);
+  font-weight: bold;
+}
+
+@media (min-width: 768px){
+  .cuenta-regresiva ul li{
+    width: 25%;
+    float: left;
+    color: rgb(40,227,82);
+    font-weight: bold;
+  }
+}
 
 
+/*footer*/
+footer{
+  background-color:  black;
+  padding-top: 40px;
+  margin-top: 20px;
+}
+/*indica que se apliquen a sus hijos*/
+.contenedor > div{
+  color: white;
+  padding: 0 20px;
+  font-size: 18px;
+}
+
+
+@media (min-width: 768px){
+  .contenedor > div{
+    width: 33.3%;
+    float: left;
+  }
+}
+
+footer h3{
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+footer h3 span{
+  color: rgb(40,227,82);
+}
+
+.ultimos-tweets li{
+  margin-bottom: 20px;
+}
+
+footer .redes-sociales{
+  text-align: left;
+}
+
+.copyright{
+  background-color: rgb(40,227,82);
+  color: black;
+  padding: 10px 0;
+  margin: 20px 0 0 0;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
