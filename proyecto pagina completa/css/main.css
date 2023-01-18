@@ -105,7 +105,6 @@ body{
 }
 
 .seccion p{
-  font-size: 1.2em;
   text-align: center;
 }
 
@@ -141,6 +140,13 @@ h3{
   font-weight: bold;
   font-size: 1.2em;
   transition: all .3s ease;
+  border:2px solid rgb(40,227,82);
+}
+
+.button.hollow,
+.button.hollow:hover{
+  background-color: black;
+  color:  rgb(40,227,82);
 }
 
 .float-right{
@@ -191,6 +197,7 @@ ul{
   height: 100vh;
   background-position: top center;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .contenido-header{
@@ -526,6 +533,128 @@ ul{
   bottom: -80px;
   opacity: 0;
 }
+
+/*contador*/
+.paralax::before{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment:fixed;
+  -webkit-filter: brightness(.7);
+  filter: brightness(.7);
+}
+.contador{
+  position: relative;
+  height: auto;
+}
+
+.contador::before{
+  background-image: url(/img/ye.webp);
+  content: '';
+}
+
+.resumen-evento{
+  /*esta relativo para que paralax pueda
+  estar en absolute siempre
+  el padre debe estar en absoluto*/
+  position: relative;
+  padding: 120px 0;
+}
+
+.resumen-evento li{
+  width: 50%;
+  float: left;
+  text-align: center;
+  color:  rgb(40,227,82);
+  text-transform: uppercase;
+  font-size: 24px;
+}
+
+@media (min-width: 768px){
+  .resumen-evento li{
+    width: 25%;
+  }
+}
+
+.numero{
+  color: rgb(2, 2, 2);
+  font-size: 4em;
+  display: block;
+  margin: 0 0 10px 0;
+}
+
+/*Tabla de Precios*/
+.lista-precios > li{
+  padding: 10px;
+}
+
+@media (min-width: 768px){
+  .lista-precios > li{
+    float: left;
+    width: 33.3%;
+  }
+}
+
+.tabla-precio{
+  border: 1px solid gray;
+  background-color: black;
+  padding: 40px 0;
+  text-align: center;
+  transition: all .3s ease;
+}
+
+.tabla-precio:hover{
+  transform: scale(1.1);
+  border: 1px solid orange;
+  box-shadow: 0px 0px 50px #666;
+}
+
+.tabla-precio ul li{
+  margin-bottom: 21px;
+  font-size: 25px;
+  text-transform: uppercase;
+  color: white;
+  line-height: 36px;
+}
+
+.tabla-precio ul li::before{
+  font-family: 'Fontawesome';
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 5px;
+  font-size: 20px;
+  color: green;
+  -webkit-font-smoothing: antialiased;
+  /*ahi puedeir el unicode que esta en fontawesome*/
+  content: '\f00c';
+}
+
+.tabla-precio h3{
+  font-size: 27px;
+  text-transform: uppercase;
+}
+
+/*para no malograr todo el selector es
+para una seleccion mas exacta*/
+.tabla-precio p.numero{
+  color: whitesmoke;
+}
+
+
+/*Mapa*/
+.mapa{
+  height: 420px;
+  background-color: green;
+}
+
+
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
