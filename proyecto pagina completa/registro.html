@@ -1,0 +1,234 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,300&family=Rowdies&family=Sofia+Sans+Condensed&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="hero">
+      <div class="contenido-header">
+        <nav class="redes-sociales">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-github"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </nav>
+        <div class="informacion-evento">
+          <div class="clearfix">
+            <p class="fecha"><i class="fa-solid fa-calendar"></i>3-14 Abril</p>
+            <p class="ciudad"><i class="fa-solid fa-location-pin"></i>Lima,PERU</p>
+          </div>
+          <h1 class="nombre-sitio">Concierto Benefico</h1>
+          <p class="slogan">El mejor concierto<span> de este año</span></p>
+        </div>
+      </div>
+    </div> <!--hero-->
+  </header>
+
+  <div class="barra">
+    <div class="contenedor clearfix">
+      <div class="logo">
+        <a href="index.html">
+            <img src="img/neco.png" alt="" width="200px">
+        </a>
+      </div>
+
+      <div class="menu-movil">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav class="navegacion-principal">
+        <a href="#">Cronograma</a>
+        <a href="#">Calendario</a>
+        <a href="#">Invitados</a>
+        <a href="registro.html">Reservas</a>
+      </nav>
+    </div><!--contenedor-->
+  </div> <!---barra-->
+
+  <section class="seccion contenedor">
+    <h2>Registro de Usuarios</h2>
+    <!--siempre en metodo post-->
+    <form id="registro" class="registro" action="index.html" method="post">
+      <div id="datos_usuario" class="registro caja clearfix">
+        <div class="campo">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu Nombre">
+        </div>
+        <div class="campo">
+          <label for="apellido">Apellido</label>
+          <input type="text" id="apellido" name="apellido" placeholder="Tu Apellido">
+        </div>
+        <div class="campo">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Tu Email">
+        </div>
+        <div id="error"></div>
+      </div><!--cierre datos usuario-->
+
+      <div id="paquetes" class="paquetes">
+        <h3>Elige el Numero de Boletos</h3>
+        <ul class="lista-precios clearfix">
+          <li>
+            <div class="tabla-precio">
+              <h3>Pase por Dia (Viernes o Sabado) </h3>
+              <p class="numero">$30</p>
+              <ul>
+                <li>Bocadillos Gratis</li>
+                <li>Todos Los Conciertos</li>
+                <li>Todas Las Actividades</li>
+              </ul>
+              <div class="orden">
+                <label for="pase_dia">Boletos Deseados</label>
+                <input type="number" min="0" id="pase_dia" size="3" placeholder="0">
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="tabla-precio">
+              <h3>Todos Los Dias</h3>
+              <p class="numero">$80</p>
+              <ul>
+                <li>Bocadillos Gratis</li>
+                <li>Todos Los Conciertos</li>
+                <li>Todas Las Actividades</li>
+              </ul>
+              <div class="orden">
+                <label for="pase_completo">Boletos Deseados</label>
+                <input type="number" min="0" id="pase_completo" size="3" placeholder="0">
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="tabla-precio">
+              <h3>Pase por 2 Dia (viernes y sabado) </h3>
+              <p class="numero">$50</p>
+              <ul>
+                <li>Bocadillos Gratis</li>
+                <li>Todos Los Conciertos</li>
+                <li>Todas Las Actividades</li>
+              </ul>
+              <div class="orden">
+                <label for="pase_dosdias">Boletos Deseados</label>
+                <input type="number" min="0" id="pase_dosdias" size="3" placeholder="0">
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div><!--cierre paquetes-->
+
+      <div id="resumen" class="resumen clearfix">
+        <h3>Pago y Extras </h3>
+        <div class="caja clearfix">
+          <div class="extras">
+            <div class="orden">
+              <label for="camisa_evento">Camisa del Evento $20 <small>(7% de descuento)</small></label><br>
+              <input type="number" min="0" id="camisa_evento" size="3" placeholder="0">
+            </div> <!--orden-->
+            <div class="orden">
+              <label for="etiquetas">Paquete de 10 etiquetas $5<small>(kanye,Kid cudi)</small></label><br>
+              <input type="number" min="0" id="etiquetas" size="3" placeholder="0">
+            </div> <!--orden-->
+            <div class="orden">
+              <label for="regalo">Seleccion un regalo</label><br>
+              <select id="regalo" required>
+                <option value="">--Seleccione un regalo</option>
+                <option value="ETI">Etiquetas</option>
+                <option value="PUL">Pulseras</option>
+                <option value="CO">Collar</option>
+              </select>
+            </div> <!--orden-->
+            <input type="button" id="calcular" class="button" value="calcular">
+          </div> <!--extras-->
+
+          <div class="total">
+            <p>Resumen:</p>
+            <div id="lista-productos">
+
+            </div>
+            <p>Total:</p>
+            <div id="suma-total">
+
+            </div>
+            <input type="submit" id="btnRegistro" class="button" value="pagar">
+          </div><!--total-->
+        </div> <!--caja-->
+      </div> <!--resumen-->
+
+    </form>
+  </section>
+
+
+
+
+
+  <footer class="site-footer">
+    <div class="contenedor clearfix">
+      <div class="footer-informacion">
+        <h3>Sobre<span> gdlwebcamp</span></h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius laboriosam placeat quis dicta praesentium voluptates, nam a saepe harum maxime nesciunt? Voluptatibus quidem odit in quasi nobis accusamus, iste soluta.</p>
+      </div>
+      <div class="ultimos-tweets">
+        <h3>Ultimos<span> tweets</span></h3>
+        <ul>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi animi </li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi animi </li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi animi </li>
+        </ul>
+      </div>
+      <div class="menu">
+        <h3>Redes<span> Sociales</span></h3>
+        <nav class="redes-sociales">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-github"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </nav>
+      </div>
+    </div>
+
+    <p class="copyright">
+      Todos los derechos Reservados MOMICHIS 2023
+    </p>
+  </footer>
+
+  <!--modernizr sirve para obtener de que navegador esta usando el usuario-->
+  <script src="https://kit.fontawesome.com/359d016a31.js" crossorigin="anonymous"></script>
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script> <!---analitics-->
+</body>
+
+</html>
