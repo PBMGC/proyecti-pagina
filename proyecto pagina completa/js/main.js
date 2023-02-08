@@ -17,8 +17,7 @@
         L.marker([-12.096133, -77.03142]).addTo(map)
             .bindPopup('Aqui es el evento')
             .openPopup();  
-        
-
+    
         //campo datos usuario//
         var nombre = document.getElementById("nombre");
         var apellido = document.getElementById("apellido");
@@ -123,4 +122,23 @@ $(function(){
 
         return false;
     });
+
+    //Animaciones Numeros
+    //por medio de jquery animate numbers (libreria)
+    
+    //nth child hace que cada hijo sea igual a un numero 
+    //el animate pide un parametro si o si 
+    //el primer valor indica el numero que se desea animado
+    //el segundo indica cuanto durara la animacion
+    $('.resumen-evento li:nth-child(1) p').animateNumber({number:6},1200);
+    $('.resumen-evento li:nth-child(2) p').animateNumber({number:3},1500);
+    $('.resumen-evento li:nth-child(3) p').animateNumber({number:8},1200);
+    $('.resumen-evento li:nth-child(4) p').animateNumber({number:10},1200);
+
+
+
+
+
 });
+
+
