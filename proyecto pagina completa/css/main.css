@@ -432,9 +432,6 @@ ul{
 
 .menu-programa{
   width: 100%;
-  border-bottom: 1px solid black;
-  padding-bottom: 10px;
-  text-align: center;
 }
 
 @media (min-width: 768px){
@@ -450,7 +447,28 @@ ul{
   color: black;
   margin-bottom: 10px;
   font-size: 1.1em;
+  position: relative;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
 }
+
+.menu-programa a.activo::after{
+  position: absolute;
+  content: '';
+  /*para posicionar centralmente horizontalmente
+  con posicion absoluta*/
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  height: 20px;
+  width: 30px;
+  background-image: url(../img/separador.png);
+  background-position: top center;
+  background-repeat: no-repeat;
+  bottom: -5px;
+}
+
 
 @media (min-width: 768px){
   .menu-programa a{

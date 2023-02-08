@@ -2,11 +2,23 @@
 
 (function(){
     "use strict";
+
     //regalos//
     var regalo= document.getElementById("regalo");
 
     document.addEventListener("DOMContentLoaded",function(){
         
+        var map = L.map('mapa').setView([-12.096133, -77.03142], 90);
+
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([-12.096133, -77.03142]).addTo(map)
+            .bindPopup('Aqui es el evento')
+            .openPopup();  
+        
+
         //campo datos usuario//
         var nombre = document.getElementById("nombre");
         var apellido = document.getElementById("apellido");
@@ -92,4 +104,23 @@
         }
 
     });//DOM content Loaded// //=documento cargado//
+    
 })();
+
+$(function(){
+    //programa conferencias//
+    $('.ocultar').hide();
+    $('.programa-evento .info-curso:first').show();
+    $('menu-programa a:first').addClass('activo');
+    $('.menu-programa a').on('click',function(){
+        //remover clase con jquery
+        $('.menu-programa a').removeClass('activo');
+        $(this).addClass('activo')
+        $('.ocultar').hide();
+        //obtener valor por medio de attr
+        var enlace = $(this).attr('href');
+        $(enlace).fadeIn(1000);
+
+        return false;
+    });
+});

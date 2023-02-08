@@ -14,6 +14,7 @@
 
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
   <!-- Place favicon.ico in the root directory -->
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,300&family=Rowdies&family=Sofia+Sans+Condensed&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
@@ -110,6 +111,40 @@
             </div>
             <a href="#" class="button float-right">Ver Todos</a>
           </div><!--id talleres-->
+
+        <div id="conferencias" class="info-curso ocultar clearfix">
+            <div class="detalle-evento">
+              <h3>Historia de los Momichis</h3>
+              <p><i class="fa-solid fa-clock"></i>11:00 hrs</p>
+              <p><i class="fa-solid fa-calendar"></i>10 de Diciembre</p>
+              <p><i class="fa-solid fa-star"></i>Momichis</p>
+            </div>
+          <div class="detalle-evento">
+           <h3>Momos New Wave</h3>
+            <p><i class="fa-solid fa-clock"></i>13:00 hrs</p>
+            <p><i class="fa-solid fa-calendar"></i>10 de Diciembre</p>
+            <p><i class="fa-solid fa-star"></i>Gato carbon</p>
+          </div>
+          <a href="#" class="button float-right">Ver Todos</a>
+        </div><!--id talleres-->
+
+        <div id="seminarios" class="info-curso ocultar clearfix">
+          <div class="detalle-evento">
+            <h3>Diseño Perpetuo</h3>
+            <p><i class="fa-solid fa-clock"></i>9:50 hrs</p>
+            <p><i class="fa-solid fa-calendar"></i>10 de Diciembre</p>
+            <p><i class="fa-solid fa-star"></i>Gatichi</p>
+          </div>
+
+          <div class="detalle-evento">
+            <h3>Aprende a programar con Perrin</h3>
+            <p><i class="fa-solid fa-clock"></i>8:00 hrs</p>
+            <p><i class="fa-solid fa-calendar"></i>10 de Diciembre</p>
+            <p><i class="fa-solid fa-star"></i>Chanchis</p>
+          </div>
+          <a href="#" class="button float-right">Ver Todos</a>
+        </div><!--id talleres-->
+
         </div><!--programa evento-->
       </div><!--contendor--->
     </div><!--contenido del programa-->
@@ -303,7 +338,9 @@
 
   <!--modernizr sirve para obtener de que navegador esta usando el usuario-->
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/jquery-3.6.3.min.js"></script>
   <script src="js/plugins.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
   <script src="js/main.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
