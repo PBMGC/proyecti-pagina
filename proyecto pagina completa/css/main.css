@@ -201,6 +201,66 @@ ul{
   }
 }
 
+/*lettering*/
+.nombre-sitio span{
+  position: relative;
+  text-shadow: 0 0 30px black;
+}
+
+
+@media (min-width: 992px) {
+  /*estos cambios se logran con la libreria de lettering*/
+  /*ademas el contenedor padre esta en relative lo que permite esto*/
+  .char1{
+    top: 20px; right: 20px;
+  }
+  .char2{
+    top: 0; left: -20px;
+  }
+  .char3{
+    top: 10px;right: 20px;
+  }
+  .char4{
+    top: 5px; right: 10px;
+  }
+  .char5{
+    top: 15px;right: 10px;
+  }
+  .char6{
+    top: 5px;left: -8px;
+  }
+  .char7{
+    top: 5px; right: 10px;
+  }
+  .char8{
+    top: 0;left: 10px;
+  }
+  .char9{
+    top: 10px;right: 20px;
+  }
+  .char10{
+    top: 20px;right: 20px;
+  }
+  .char11{
+    top: 10px; right: 10px;
+  }
+  .char12{
+    top: 20px; left: -20px;
+  }
+  .char13{
+    top: -5px; right: 10px;
+  }
+  .char14{
+    top: 5px; right: 20px;
+  }
+  .char15{
+    top: 20px;left: -10px;
+  }
+  .char17{
+    top: 20px;left: -10px;
+  }
+}
+
 
 /*header*/
 

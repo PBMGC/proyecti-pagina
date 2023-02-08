@@ -107,6 +107,14 @@
 })();
 
 $(function(){
+
+    //letteting con plugin
+
+    $('.nombre-sitio').lettering();
+
+
+
+
     //programa conferencias//
     $('.ocultar').hide();
     $('.programa-evento .info-curso:first').show();
@@ -135,6 +143,22 @@ $(function(){
     $('.resumen-evento li:nth-child(3) p').animateNumber({number:8},1200);
     $('.resumen-evento li:nth-child(4) p').animateNumber({number:10},1200);
 
+
+    //cuenta regresiva con plugins
+    //sintaxis que pide la libreria para ejecutar las animaciones
+    //pide el año despues el mes y por ultimo el dia
+    $('.cuenta-regresiva').countdown('2023/04/03 08:00:00',function(event){
+        //pide indicarle que va ir con id
+        //ademas jquery tiene una funcion que permite poner html
+        //con %D se le indica que imprima los dias
+        //la funcion strftime convierte strings a days
+        $("#dias").html(event.strftime('%D'));
+        $("#horas").html(event.strftime('%H'));
+        $("#minutos").html(event.strftime('%M'));
+        $("#segundos").html(event.strftime('%S'));
+
+
+    });
 
 
 
