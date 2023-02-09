@@ -41,10 +41,13 @@
         //cuando hagan click en calcular//
         //primer valor la accion que inicie el evento//
         //el segundo la funcion que pasara una vez se realize click//
-        calcular.addEventListener('click', calcularmontos);
-        
+        //para evitar error de adevent listener solo es necesario poner las llaves
+        if(document.getElementById('calcular')){
 
-        function calcularmontos(event){
+            calcular.addEventListener('click', calcularmontos);
+            
+            
+            function calcularmontos(event){
             event.preventDefault();
             if (regalo.value==""){
                 alert ("elige un regalo bastardo");
@@ -54,29 +57,29 @@
                 //esto sirve para indicar que se usara el sistema decimal//
                 //cada que se use parse//
                 var boletosDia= parseInt(pase_dia.value,10) || 0,
-                    boletos2Dias=parseInt(pase_dosdias.value,10)||0,
-                    boletosCompleto = parseInt(pase_completo.value,10)||0,
-                    cantCamisas = parseInt(camisas.value,10)||0,
-                    cantEtiquetas = parseInt(etiquetas.value,10)||0;
-
-                    console.log("boletos adquiridos: " + (boletosDia+boletos2Dias+boletosCompleto));
-
-                    var totalpagar = (boletosDia*30) + (boletos2Dias*50) +(boletosCompleto*80) + (cantCamisas*20-((cantCamisas*20)*0.07))+ (cantEtiquetas*5);
-
-                    console.log(totalpagar);
-
-                    var listadoProductos = [];
-
-                    if (boletosDia) {
-                        if (boletosDia==1) listadoProductos.push( boletosDia + " Boleto 1 dia");
-                        if (boletosDia>1) listadoProductos.push( boletosDia + " Boletos 1 dia");
-                    }
-                    if (boletos2Dias) {
-                        if (boletos2Dias==1) listadoProductos.push( boletos2Dias + " Boleto 2 dias");
-                        if (boletos2Dias>1) listadoProductos.push( boletos2Dias + " Boletos 2 dias");
-                    }
-                    if (boletosCompleto){
-                        if (boletosCompleto==1) listadoProductos.push( boletosCompleto + " Boleto dia compleo");
+                boletos2Dias=parseInt(pase_dosdias.value,10)||0,
+                boletosCompleto = parseInt(pase_completo.value,10)||0,
+                cantCamisas = parseInt(camisas.value,10)||0,
+                cantEtiquetas = parseInt(etiquetas.value,10)||0;
+                
+                console.log("boletos adquiridos: " + (boletosDia+boletos2Dias+boletosCompleto));
+                
+                var totalpagar = (boletosDia*30) + (boletos2Dias*50) +(boletosCompleto*80) + (cantCamisas*20-((cantCamisas*20)*0.07))+ (cantEtiquetas*5);
+                
+                console.log(totalpagar);
+                
+                var listadoProductos = [];
+                
+                if (boletosDia) {
+                    if (boletosDia==1) listadoProductos.push( boletosDia + " Boleto 1 dia");
+                    if (boletosDia>1) listadoProductos.push( boletosDia + " Boletos 1 dia");
+                }
+                if (boletos2Dias) {
+                    if (boletos2Dias==1) listadoProductos.push( boletos2Dias + " Boleto 2 dias");
+                    if (boletos2Dias>1) listadoProductos.push( boletos2Dias + " Boletos 2 dias");
+                }
+                if (boletosCompleto){
+                    if (boletosCompleto==1) listadoProductos.push( boletosCompleto + " Boleto dia compleo");
                         if (boletosCompleto>1) listadoProductos.push( boletosCompleto + " Boletos dia completo");
                     }
                     if (cantCamisas) {
@@ -87,23 +90,24 @@
                         if (cantEtiquetas==1) listadoProductos.push( cantEtiquetas + " etiqueta");
                         if (cantEtiquetas>1) listadoProductos.push( cantEtiquetas + " etiquetas");
                     }
-
+                    
                     //esconder//
                     //cambiar estilo desde js//
                     listaProductos.style.display="block";
                     //aqui se reinicia el inner en cada click//
                     listaProductos.innerHTML= '';
-
+                    
                     for (var i =0 ; i<listadoProductos.length;i++){
                         listaProductos.innerHTML += listadoProductos[i] + "<br/>"
                     }
-
+                    
                     suma.innerHTML = '$' + totalpagar.toFixed(2);
                 }
-        }
-
-    });//DOM content Loaded// //=documento cargado//
-    
+            }
+            }
+            
+        });//DOM content Loaded// //=documento cargado//
+        
 })();
 
 $(function(){
@@ -112,6 +116,44 @@ $(function(){
 
     $('.nombre-sitio').lettering();
 
+    //menu fijo
+    //con esta variable y el metodo height
+    //gracias a jquery se puede saber cual es el tamaño de la ventana
+    var windowHeight= $(window).height();
+
+    //saber cuanto mide la barra//
+    //se le puede pasar true para saber mas a profundidad sus valores
+    var barraaltura = $(".barra").innerHeight();
+
+    
+    
+    //el scroll captar los scroll que se hagan
+    $(window).scroll(function(){
+        //aqui captara los scroll
+        var scroll = $(window).scrollTop();
+
+        //validacion
+        if(scroll>windowHeight){
+            $(".barra").addClass("fixed");
+            //añadido del margin de manera dinamica por medio de js
+            //al saber la altura de la barra , ese valor se convertira
+            //en los pixeles de margin top al ponerse en fixed
+            $("body").css({"margin-top":barraaltura+"px"});
+            //al ponerle el margin se evita el salto que se ve mal
+        } else{
+            $(".barra").removeClass("fixed");
+            $("body").css({"margin-top":"0px"});
+        }
+        
+    });
+
+    //menu responsive//
+    $(".menu-movil").on('click',function(){
+        //lo que hace slideToogle hace que itere entre slideup y down //
+        //cada vez que este en up pasa a down caundo se le de click
+        $(".navegacion-principal").slideToggle();
+
+    });
 
 
 

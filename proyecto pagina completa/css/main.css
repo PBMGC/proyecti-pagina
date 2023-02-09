@@ -207,59 +207,58 @@ ul{
   text-shadow: 0 0 30px black;
 }
 
-
-@media (min-width: 992px) {
-  /*estos cambios se logran con la libreria de lettering*/
-  /*ademas el contenedor padre esta en relative lo que permite esto*/
-  .char1{
-    top: 20px; right: 20px;
-  }
-  .char2{
-    top: 0; left: -20px;
-  }
-  .char3{
-    top: 10px;right: 20px;
-  }
-  .char4{
-    top: 5px; right: 10px;
-  }
-  .char5{
-    top: 15px;right: 10px;
-  }
-  .char6{
-    top: 5px;left: -8px;
-  }
-  .char7{
-    top: 5px; right: 10px;
-  }
-  .char8{
-    top: 0;left: 10px;
-  }
-  .char9{
-    top: 10px;right: 20px;
-  }
-  .char10{
-    top: 20px;right: 20px;
-  }
-  .char11{
-    top: 10px; right: 10px;
-  }
-  .char12{
-    top: 20px; left: -20px;
-  }
-  .char13{
-    top: -5px; right: 10px;
-  }
-  .char14{
-    top: 5px; right: 20px;
-  }
-  .char15{
-    top: 20px;left: -10px;
-  }
-  .char17{
-    top: 20px;left: -10px;
-  }
+/*estos cambios se logran con la libreria de lettering*/
+/*ademas el contenedor padre esta en relative lo que permite esto*/
+.char1{
+  top: 20px; right: 20px;
 }
+.char2{
+  top: 0; left: -20px;
+}
+.char3{
+  top: 10px;right: 20px;
+}
+.char4{
+  top: 5px; right: 10px;
+}
+.char5{
+  top: 15px;right: 10px;
+}
+.char6{
+  top: 5px;left: -8px;
+}
+.char7{
+  top: 5px; right: 10px;
+}
+.char8{
+  top: 0;left: -10px;
+}
+.char9{
+  top: 10px;right: 20px;
+}
+.char10{
+  top: 20px;right: 20px;
+}
+.char11{
+  top: 10px; right: 10px;
+}
+.char12{
+  top: 20px; left: -20px;
+}
+.char13{
+  top: -5px; right: 10px;
+}
+.char14{
+  top: 5px; right: 20px;
+}
+.char15{
+  top: 20px;left: -10px;
+}
+.char17{
+  top: 20px;left: -10px;
+}
+
+
 
 
 /*header*/
@@ -353,6 +352,16 @@ ul{
   padding: 10px 0;
 }
 
+.fixed{
+  /*hace que se quede en una posicion fija*/
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  /*para que no desaparesca*/
+  z-index: 2;
+}
+
 .logo{
   width: 50%;
   float: left;
@@ -374,6 +383,8 @@ ul{
 /*navegacion principal*/
 .navegacion-principal{
   display: none;
+  width: 100%;
+  padding: 20px;
 }
 
 .navegacion-principal a{
@@ -412,7 +423,7 @@ ul{
 
   .navegacion-principal a{
     margin-right: 20px;
-    line-height: 70px;
+    line-height: 30px;
     display: inline-block;
     width: auto;
     display:inline-block;
@@ -595,8 +606,8 @@ ul{
   e para internet explorer
   lo que hace es que haya cierta funciones 
   en ciertos navegadores*/
-  -webkit-filter: grayscale(1);
-  -webkit-transition: all .5s ease-in-out;
+  -webkit-filter: grayscale(1);/*filtro*/
+  -webkit-transition: all .5s ease-in-out;/*transiicion o animaciobn*/
 }
 
 .invitado:hover img {
@@ -918,6 +929,17 @@ footer .redes-sociales{
 
 
 /*internas*/
+
+/*conferencia*/
+.galeria{
+  align-items: center;
+}
+
+.galeria img{
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
 /*registro*/
 
 .registro h3{
