@@ -318,7 +318,7 @@ se le debe aplicar un no margin a los h3*/
 
 @media (min-width: 768px){
     .formulario-contacto{
-        margin-top: -28rem;
+        margin-top: -3rem;
     }
 }
 
